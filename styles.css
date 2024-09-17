@@ -1,0 +1,368 @@
+:root {
+  --text-color: #1a1c20;
+  --link-color: #4a76ee;
+  --background-color: #eeeff1;
+  --primary-color: #ff6f61;
+  --secondary-color: #ffc107;
+  --light-bg-color: #f5f5f5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  background-color: var(--light-bg-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+nav .left a {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .right a {
+  color: var(--text-color);
+  margin: 0 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav .right a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+nav .right a:last-child {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin: 50px 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 30%,
+    var(--secondary-color) 100%
+  );
+  color: #fff;
+  border-radius: 10px;
+}
+
+.hero-section .text h2 {
+  font-size: 45px;
+}
+
+.hero-section .text p {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.hero-section .text .links a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.hero-section .text .links a:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.hero-section .headshot {
+  flex: 2;
+  display: flex;
+  justify-content: right;
+}
+
+.hero-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.skills-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--primary-color);
+}
+
+.skills-section .text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skills-section .cells .cell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.skills-section .cells .cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+.testimony-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.testimony-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.testimony-section .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.testimony-section .group .person-details img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.testimony-section .group .text {
+  flex: 8;
+  background-color: var(--light-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px var(--shadow-color);
+}
+
+.contact-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.contact-section h2 {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact-section .contact-paragraph-container {
+  flex: 1;
+  margin-top: 10px;
+  background-color: var(--light-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+contact-section .group form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid var(--primary-color);
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#projects {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#projects h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  display: block;
+  margin: 10px auto 0;
+}
+
+#projects .group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#projects .group > div {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects .group > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#projects .group img {
+  width: auto;
+  max-width: 99%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+#projects .text {
+  padding: 20px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#projects .text h3 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #projects .group > div {
+    flex: 1 1 100%;
+  }
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+  border-color: var(--link-color);
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .group form button:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: var(--link-color);
+  margin: 0 10px;
+}
